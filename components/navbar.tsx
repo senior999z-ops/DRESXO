@@ -1,9 +1,10 @@
-'use client';
+﻿'use client';
 
 import { useEffect, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 import { Heart, Menu, Moon, ShoppingBag, Sun, X } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCart, useWishlist } from '@/components/providers';
@@ -48,12 +49,22 @@ export function Navbar() {
         )}
       >
         <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-10">
-          <Link href="/" className="group flex flex-col items-start">
-            <span className="font-mono-wide text-[9px] uppercase tracking-[0.4em] text-volt">
-              Menswear
-            </span>
-            <span className="font-display text-2xl font-semibold uppercase tracking-[0.24em] text-ink dark:text-frost-50">
-              DRESXO
+          <Link href="/" className="group flex items-center gap-2.5">
+            <Image
+              src="/brand/logo-mark-transparent.png"
+              alt="DRESXO"
+              width={38}
+              height={21}
+              className="h-6 w-auto object-contain lg:h-7"
+              priority
+            />
+            <span className="flex flex-col items-start">
+              <span className="font-mono-wide text-[9px] uppercase tracking-[0.4em] text-volt">
+                Men's Wear
+              </span>
+              <span className="font-display text-2xl font-semibold uppercase tracking-[0.24em] text-ink dark:text-frost-50">
+                DRESXO
+              </span>
             </span>
           </Link>
 
