@@ -1,0 +1,167 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* DRESXO palette — cool graphite base, steel mids, electric volt accent */
+    --background: 210 20% 96%;
+    --foreground: 215 30% 14%;
+    --border: 215 15% 85%;
+    --radius: 1rem;
+
+    --ink: 215 30% 14%;
+    --ink-dark: 218 35% 8%;
+    --ink-light: 215 20% 28%;
+
+    --steel: 212 14% 45%;
+    --steel-dark: 214 18% 32%;
+    --steel-light: 210 14% 62%;
+
+    --frost: 210 20% 94%;
+    --frost-50: 208 28% 98%;
+    --frost-100: 210 20% 94%;
+    --frost-200: 212 16% 88%;
+
+    --volt: 200 88% 52%;
+    --volt-dark: 205 82% 42%;
+    --volt-light: 195 90% 64%;
+  }
+
+  .dark {
+    --background: 218 32% 9%;
+    --foreground: 210 20% 94%;
+    --border: 215 20% 22%;
+
+    --frost: 218 25% 14%;
+    --frost-50: 218 28% 12%;
+    --frost-100: 218 25% 14%;
+    --frost-200: 216 22% 20%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  ::selection {
+    background-color: hsl(var(--volt) / 0.28);
+    color: hsl(var(--ink));
+  }
+}
+
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display), Impact, sans-serif;
+  }
+  .font-sans {
+    font-family: var(--font-sans), system-ui, sans-serif;
+  }
+  .font-mono-wide {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  /* Mobile: solid panels (no blur) so phones stay smooth */
+  .panel {
+    background: hsl(var(--frost-50) / 0.94);
+    border: 1px solid hsl(var(--border) / 0.7);
+  }
+  .dark .panel {
+    background: hsl(var(--frost-50) / 0.9);
+    border: 1px solid hsl(var(--border));
+  }
+  .panel-strong {
+    background: hsl(var(--frost-50) / 0.97);
+    border: 1px solid hsl(var(--volt) / 0.22);
+  }
+  .dark .panel-strong {
+    background: hsl(var(--frost-50) / 0.95);
+    border: 1px solid hsl(var(--volt) / 0.28);
+  }
+
+  /* Desktop only: frosted glass */
+  @media (min-width: 1024px) {
+    .panel {
+      background: hsl(var(--frost-50) / 0.62);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    .dark .panel {
+      background: hsl(var(--frost-50) / 0.45);
+      backdrop-filter: blur(18px) saturate(160%);
+      -webkit-backdrop-filter: blur(18px) saturate(160%);
+    }
+    .panel-strong {
+      background: hsl(var(--frost-50) / 0.8);
+      backdrop-filter: blur(26px) saturate(180%);
+      -webkit-backdrop-filter: blur(26px) saturate(180%);
+    }
+    .dark .panel-strong {
+      background: hsl(var(--frost-50) / 0.7);
+      backdrop-filter: blur(26px) saturate(180%);
+      -webkit-backdrop-filter: blur(26px) saturate(180%);
+    }
+  }
+
+  .text-gradient-volt {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--volt-dark)),
+      hsl(var(--volt)),
+      hsl(var(--volt-light)),
+      hsl(var(--volt))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .text-gradient-steel {
+    background: linear-gradient(
+      120deg,
+      hsl(var(--ink)),
+      hsl(var(--steel)),
+      hsl(var(--steel-light))
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+
+  .glow-volt {
+    box-shadow: 0 0 32px hsl(var(--volt) / 0.32), 0 0 64px hsl(var(--volt) / 0.14);
+  }
+
+  .bg-grid {
+    background-image:
+      linear-gradient(hsl(var(--steel) / 0.07) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--steel) / 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: hsl(var(--frost-200)); }
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--steel) / 0.5);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: hsl(var(--volt)); }
+
+@media (min-width: 1024px) {
+  .custom-cursor-active * { cursor: none !important; }
+}
