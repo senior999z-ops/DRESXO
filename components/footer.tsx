@@ -67,8 +67,8 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-4">
             {[
-              { icon: Instagram, href: 'https://instagram.com/dresxo.official' },
-              { icon: Music2, href: 'https://tiktok.com/@dresxo.official' },
+              { icon: Instagram, href: 'https://instagram.com/dresxo.pk' },
+              { icon: Music2, href: 'https://tiktok.com/@dresxo' },
               { icon: MessageCircle, href: 'https://wa.me/923279198527' },
               { icon: Mail, href: 'mailto:support.lunarbloom.pk@gmail.com' },
             ].map((s, i) => (
