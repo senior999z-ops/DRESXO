@@ -1,6 +1,6 @@
-import { NextResponse } from 'next/server';
+﻿import { NextResponse } from 'next/server';
 
-const TO_EMAIL = 'support.lunarbloom.pk@gmail.com';
+const TO_EMAIL = 'dresxo.support@gmail.com';
 const FROM_EMAIL = 'DRESXO Website <onboarding@resend.dev>';
 
 export async function POST(request: Request) {

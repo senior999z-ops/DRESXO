@@ -70,7 +70,7 @@ export function Footer() {
               { icon: Instagram, href: 'https://instagram.com/dresxo.pk' },
               { icon: Music2, href: 'https://tiktok.com/@dresxo' },
               { icon: MessageCircle, href: 'https://wa.me/923279198527' },
-              { icon: Mail, href: 'mailto:support.lunarbloom.pk@gmail.com' },
+              { icon: Mail, href: 'mailto:dresxo.support@gmail.com' },
             ].map((s, i) => (
               <motion.a
                 key={i}

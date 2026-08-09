@@ -25,8 +25,8 @@ const SOCIALS = [
   },
   {
     name: 'Email',
-    handle: 'support.lunarbloom.pk@gmail.com',
-    href: 'mailto:support.lunarbloom.pk@gmail.com',
+    handle: 'dresxo.support@gmail.com',
+    href: 'mailto:dresxo.support@gmail.com',
     icon: Mail,
   },
 ];
