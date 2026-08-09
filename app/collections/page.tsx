@@ -50,44 +50,46 @@ export default function CollectionsPage() {
 
   return (
     <main className="relative z-10 lg:h-screen lg:min-h-screen lg:overflow-hidden">
-      {/* Mobile: clean, ordered, scrollable layout */}
-      <div className="px-6 pb-10 pt-52 lg:hidden">
+      {/* Mobile: clean, ordered, compact layout - fits in one screen */}
+      <div className="px-6 pb-6 pt-48 lg:hidden">
         <div className="text-center">
-          <p className="font-mono-wide text-[10px] uppercase tracking-[0.5em] text-volt">Discover</p>
-          <h1 className="mt-1 font-display text-4xl font-semibold uppercase tracking-[0.1em] text-ink dark:text-frost-50">
+          <p className="font-mono-wide text-[9px] uppercase tracking-[0.5em] text-volt">Discover</p>
+          <h1 className="mt-1 font-display text-3xl font-semibold uppercase tracking-[0.1em] text-ink dark:text-frost-50">
             Collections
           </h1>
         </div>
 
-        <div className="mt-8 grid grid-cols-2 gap-4">
+        <div className="mt-5 grid grid-cols-2 gap-3">
           {CATEGORY_CARDS.map((c) => (
             <a
               key={c.label}
               href={c.href}
               className="group relative overflow-hidden rounded-2xl border-2 border-volt/25 transition-colors active:border-volt"
-              style={{ aspectRatio: '3 / 4' }}
+              style={{ aspectRatio: '1 / 1' }}
             >
               <div
                 className="absolute inset-0 bg-cover bg-center"
                 style={{ backgroundImage: `url(${c.image})` }}
               />
               <div className="absolute inset-0 bg-ink-dark/45" />
-              <span className="panel-strong absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-2 font-mono-wide text-[10px] uppercase tracking-[0.15em] text-ink dark:text-frost-50">
+              <span className="panel-strong absolute bottom-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-3 py-1.5 font-mono-wide text-[9px] uppercase tracking-[0.15em] text-ink dark:text-frost-50">
                 {c.label}
               </span>
             </a>
           ))}
         </div>
 
-        <div className="mt-8 flex flex-wrap justify-center gap-2.5">
+        <div className="mt-5 grid grid-cols-3 gap-2">
           {NAV_BUTTONS.map((nav) => (
             <a
               key={nav.label}
               href={nav.href}
-              className="panel-strong flex items-center gap-2 whitespace-nowrap rounded-full px-5 py-3 font-mono-wide text-[10px] uppercase tracking-[0.2em] text-ink shadow-lg dark:text-frost-50"
+              className="panel-strong flex flex-col items-center justify-center gap-1.5 rounded-xl px-2 py-3 text-ink shadow-lg dark:text-frost-50"
             >
               {nav.icon}
-              {nav.label}
+              <span className="text-center font-mono-wide text-[8px] uppercase leading-tight tracking-[0.1em]">
+                {nav.label}
+              </span>
             </a>
           ))}
         </div>
