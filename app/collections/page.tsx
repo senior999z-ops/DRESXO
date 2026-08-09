@@ -49,65 +49,110 @@ export default function CollectionsPage() {
   }, []);
 
   return (
-    <main className="relative z-10 h-screen overflow-hidden">
-      <div className="pointer-events-none absolute inset-0">
-        {sparks.map((s) => (
-          <motion.div
-            key={s.id}
-            className="absolute rounded-full bg-volt"
-            style={{ top: `${s.top}%`, left: `${s.left}%`, width: 2, height: 2 }}
-            animate={{ opacity: [0.1, 0.8, 0.1] }}
-            transition={{ duration: s.duration, repeat: Infinity, delay: s.delay }}
-          />
-        ))}
+    <main className="relative z-10 min-h-screen lg:h-screen lg:overflow-hidden">
+      {/* Mobile: clean, ordered, scrollable layout */}
+      <div className="px-6 pb-16 pt-24 lg:hidden">
+        <div className="text-center">
+          <p className="font-mono-wide text-[10px] uppercase tracking-[0.5em] text-volt">Discover</p>
+          <h1 className="mt-1 font-display text-4xl font-semibold uppercase tracking-[0.1em] text-ink dark:text-frost-50">
+            Collections
+          </h1>
+        </div>
+
+        <div className="mt-10 grid grid-cols-2 gap-4">
+          {CATEGORY_CARDS.map((c) => (
+            
+              key={c.label}
+              href={c.href}
+              className="group relative overflow-hidden rounded-2xl border-2 border-volt/25 transition-colors active:border-volt"
+              style={{ aspectRatio: '3 / 4' }}
+            >
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${c.image})` }}
+              />
+              <div className="absolute inset-0 bg-ink-dark/45" />
+              <span className="panel-strong absolute bottom-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full px-4 py-2 font-mono-wide text-[10px] uppercase tracking-[0.15em] text-ink dark:text-frost-50">
+                {c.label}
+              </span>
+            </a>
+          ))}
+        </div>
+
+        <div className="mt-10 flex flex-wrap justify-center gap-2.5">
+          {NAV_BUTTONS.map((nav) => (
+            
+              key={nav.label}
+              href={nav.href}
+              className="panel-strong flex items-center gap-2 whitespace-nowrap rounded-full px-5 py-3 font-mono-wide text-[10px] uppercase tracking-[0.2em] text-ink shadow-lg dark:text-frost-50"
+            >
+              {nav.icon}
+              {nav.label}
+            </a>
+          ))}
+        </div>
       </div>
 
-      <motion.div
-        initial={{ opacity: 0, y: -12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.2, duration: 0.8 }}
-        className="absolute left-1/2 top-7 z-10 -translate-x-1/2 text-center"
-      >
-        <p className="font-mono-wide text-[10px] uppercase tracking-[0.5em] text-volt">Discover</p>
-        <h1 className="mt-1 font-display text-3xl font-semibold uppercase tracking-[0.1em] text-ink dark:text-frost-50 sm:text-5xl md:text-6xl">
-          Collections
-        </h1>
-      </motion.div>
+      {/* Desktop: ambient scattered / floating layout */}
+      <div className="relative hidden h-full lg:block">
+        <div className="pointer-events-none absolute inset-0">
+          {sparks.map((s) => (
+            <motion.div
+              key={s.id}
+              className="absolute rounded-full bg-volt"
+              style={{ top: `${s.top}%`, left: `${s.left}%`, width: 2, height: 2 }}
+              animate={{ opacity: [0.1, 0.8, 0.1] }}
+              transition={{ duration: s.duration, repeat: Infinity, delay: s.delay }}
+            />
+          ))}
+        </div>
 
-      {CATEGORY_CARDS.map((c, i) => (
-        <FloatingButton
-          key={c.label}
-          href={c.href}
-          label={c.label}
-          image={c.image}
-          variant="collection"
-          index={i}
-          total={CATEGORY_CARDS.length}
-        />
-      ))}
+        <motion.div
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="absolute left-1/2 top-7 z-10 -translate-x-1/2 text-center"
+        >
+          <p className="font-mono-wide text-[10px] uppercase tracking-[0.5em] text-volt">Discover</p>
+          <h1 className="mt-1 font-display text-3xl font-semibold uppercase tracking-[0.1em] text-ink dark:text-frost-50 sm:text-5xl md:text-6xl">
+            Collections
+          </h1>
+        </motion.div>
 
-      {NAV_BUTTONS.map((nav, i) => (
-        <FloatingButton
-          key={nav.label}
-          href={nav.href}
-          label={nav.label}
-          image=""
-          icon={nav.icon}
-          variant="nav"
-          index={i}
-          total={NAV_BUTTONS.length}
-        />
-      ))}
+        {CATEGORY_CARDS.map((c, i) => (
+          <FloatingButton
+            key={c.label}
+            href={c.href}
+            label={c.label}
+            image={c.image}
+            variant="collection"
+            index={i}
+            total={CATEGORY_CARDS.length}
+          />
+        ))}
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.9 }}
-        className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 font-mono-wide text-[9px] uppercase tracking-[0.3em] text-steel/60"
-      >
-        Tap any to explore
-      </motion.p>
+        {NAV_BUTTONS.map((nav, i) => (
+          <FloatingButton
+            key={nav.label}
+            href={nav.href}
+            label={nav.label}
+            image=""
+            icon={nav.icon}
+            variant="nav"
+            index={i}
+            total={NAV_BUTTONS.length}
+          />
+        ))}
+
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 1.2, duration: 0.9 }}
+          className="absolute bottom-5 left-1/2 z-10 -translate-x-1/2 font-mono-wide text-[9px] uppercase tracking-[0.3em] text-steel/60"
+        >
+          Tap any to explore
+        </motion.p>
+      </div>
     </main>
   );
 }
-
