@@ -49,9 +49,9 @@ export default function CollectionsPage() {
   }, []);
 
   return (
-    <main className="relative z-10 min-h-screen lg:h-screen lg:overflow-hidden">
+    <main className="relative z-10 lg:h-screen lg:min-h-screen lg:overflow-hidden">
       {/* Mobile: clean, ordered, scrollable layout */}
-      <div className="px-6 pb-16 pt-24 lg:hidden">
+      <div className="px-6 pb-10 pt-52 lg:hidden">
         <div className="text-center">
           <p className="font-mono-wide text-[10px] uppercase tracking-[0.5em] text-volt">Discover</p>
           <h1 className="mt-1 font-display text-4xl font-semibold uppercase tracking-[0.1em] text-ink dark:text-frost-50">
@@ -59,7 +59,7 @@ export default function CollectionsPage() {
           </h1>
         </div>
 
-        <div className="mt-10 grid grid-cols-2 gap-4">
+        <div className="mt-8 grid grid-cols-2 gap-4">
           {CATEGORY_CARDS.map((c) => (
             <a
               key={c.label}
@@ -79,7 +79,7 @@ export default function CollectionsPage() {
           ))}
         </div>
 
-        <div className="mt-10 flex flex-wrap justify-center gap-2.5">
+        <div className="mt-8 flex flex-wrap justify-center gap-2.5">
           {NAV_BUTTONS.map((nav) => (
             <a
               key={nav.label}
