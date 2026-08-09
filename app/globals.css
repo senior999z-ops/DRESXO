@@ -1,42 +1,47 @@
-@tailwind base;
+﻿@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   :root {
-    /* DRESXO palette — cool graphite base, steel mids, electric volt accent */
-    --background: 210 20% 96%;
-    --foreground: 215 30% 14%;
-    --border: 215 15% 85%;
+    /* DRESXO palette — ivory base, warm bronze neutrals, antique gold accent */
+    --background: 42 38% 95%;
+    --foreground: 30 12% 9%;
+    --border: 40 20% 82%;
     --radius: 1rem;
 
-    --ink: 215 30% 14%;
-    --ink-dark: 218 35% 8%;
-    --ink-light: 215 20% 28%;
+    --ink: 30 12% 9%;
+    --ink-dark: 30 14% 4%;
+    --ink-light: 30 8% 24%;
 
-    --steel: 212 14% 45%;
-    --steel-dark: 214 18% 32%;
-    --steel-light: 210 14% 62%;
+    --steel: 35 10% 40%;
+    --steel-dark: 35 12% 27%;
+    --steel-light: 35 12% 62%;
 
-    --frost: 210 20% 94%;
-    --frost-50: 208 28% 98%;
-    --frost-100: 210 20% 94%;
-    --frost-200: 212 16% 88%;
+    --frost: 42 30% 93%;
+    --frost-50: 42 36% 97%;
+    --frost-100: 42 30% 93%;
+    --frost-200: 40 22% 86%;
 
-    --volt: 200 88% 52%;
-    --volt-dark: 205 82% 42%;
-    --volt-light: 195 90% 64%;
+    --volt: 42 55% 48%;
+    --volt-dark: 38 62% 33%;
+    --volt-light: 42 66% 70%;
   }
 
   .dark {
-    --background: 218 32% 9%;
-    --foreground: 210 20% 94%;
-    --border: 215 20% 22%;
+    /* True brand look — near-black ground, luminous foil gold */
+    --background: 30 10% 5%;
+    --foreground: 42 28% 92%;
+    --border: 38 18% 20%;
 
-    --frost: 218 25% 14%;
-    --frost-50: 218 28% 12%;
-    --frost-100: 218 25% 14%;
-    --frost-200: 216 22% 20%;
+    --frost: 30 9% 10%;
+    --frost-50: 30 10% 9%;
+    --frost-100: 30 9% 12%;
+    --frost-200: 32 10% 18%;
+
+    --volt: 42 62% 58%;
+    --volt-dark: 40 55% 40%;
+    --volt-light: 42 72% 78%;
   }
 }
 

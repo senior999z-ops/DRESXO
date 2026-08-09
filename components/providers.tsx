@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { ThemeProvider } from 'next-themes';
 import { ReactNode, createContext, useContext, useEffect, useMemo, useState } from 'react';
@@ -140,7 +140,7 @@ export function Providers({ children }: { children: ReactNode }) {
   // navigate through floating buttons instead.
   const hideChrome = isHome || isCollections || isWishlist || isAbout || isContact || isLegal || isSocial;
 
-  // The animated ambient background is decorative — keep it off the
+  // The animated ambient background is decorative â€” keep it off the
   // shopping/checkout pages so those stay fast, especially on mobile.
   const showAmbient = isHome || isCollections || isAbout || isContact || isLegal || isSocial;
 
@@ -155,7 +155,7 @@ export function Providers({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false} disableTransitionOnChange>
+    <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false} disableTransitionOnChange>
       <CartProvider>
         <WishlistProvider>
           <div className="custom-cursor-active relative min-h-screen overflow-x-hidden">

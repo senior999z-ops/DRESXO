@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { AnimatePresence, motion, useMotionValue, useSpring } from 'framer-motion';
 import { useRouter } from 'next/navigation';
@@ -231,7 +231,7 @@ export function Hero() {
           transition={{ delay: 1.1, duration: 0.7 }}
           className="mb-3 font-mono-wide text-[10px] uppercase tracking-[0.55em] text-volt"
         >
-          Menswear / Pakistan
+          Men's Wear / Pakistan
         </motion.p>
 
         <motion.h1
@@ -250,7 +250,7 @@ export function Hero() {
           transition={{ delay: 1.6, duration: 0.9 }}
           className="mt-4 max-w-sm text-sm leading-relaxed text-ink-light dark:text-frost-200"
         >
-          Tracksuits, shirts and trousers cut for movement — clean lines, honest
+          Tracksuits, shirts and trousers cut for movement â€” clean lines, honest
           fabrics, no noise.
         </motion.p>
 

@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { Instagram, Mail, MessageCircle, Music2 } from 'lucide-react';
@@ -63,7 +63,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-frost-50/10 pt-8 md:flex-row">
           <p className="font-mono-wide text-[10px] uppercase tracking-wider text-frost-50/40">
-            © {new Date().getFullYear()} DRESXO. Made in Pakistan.
+            Â© {new Date().getFullYear()} DRESXO. Made in Pakistan.
           </p>
           <div className="flex items-center gap-4">
             {[
