@@ -18,10 +18,15 @@
     --steel-dark: 35 12% 27%;
     --steel-light: 35 12% 62%;
 
+    /* frost-* stay light/cream in BOTH themes — used as text color on fixed-dark
+       surfaces (footer, loader, gold CTA buttons) throughout the components */
     --frost: 42 30% 93%;
     --frost-50: 42 36% 97%;
     --frost-100: 42 30% 93%;
     --frost-200: 40 22% 86%;
+
+    /* surface = translucent panel background, this one DOES flip with theme */
+    --surface: 42 36% 97%;
 
     --volt: 42 55% 48%;
     --volt-dark: 38 62% 33%;
@@ -34,10 +39,7 @@
     --foreground: 42 28% 92%;
     --border: 38 18% 20%;
 
-    --frost: 30 9% 10%;
-    --frost-50: 30 10% 9%;
-    --frost-100: 30 9% 12%;
-    --frost-200: 32 10% 18%;
+    --surface: 30 10% 9%;
 
     --volt: 42 62% 58%;
     --volt-dark: 40 55% 40%;
@@ -77,41 +79,41 @@
 
   /* Mobile: solid panels (no blur) so phones stay smooth */
   .panel {
-    background: hsl(var(--frost-50) / 0.94);
+    background: hsl(var(--surface) / 0.94);
     border: 1px solid hsl(var(--border) / 0.7);
   }
   .dark .panel {
-    background: hsl(var(--frost-50) / 0.9);
+    background: hsl(var(--surface) / 0.9);
     border: 1px solid hsl(var(--border));
   }
   .panel-strong {
-    background: hsl(var(--frost-50) / 0.97);
+    background: hsl(var(--surface) / 0.97);
     border: 1px solid hsl(var(--volt) / 0.22);
   }
   .dark .panel-strong {
-    background: hsl(var(--frost-50) / 0.95);
+    background: hsl(var(--surface) / 0.95);
     border: 1px solid hsl(var(--volt) / 0.28);
   }
 
   /* Desktop only: frosted glass */
   @media (min-width: 1024px) {
     .panel {
-      background: hsl(var(--frost-50) / 0.62);
+      background: hsl(var(--surface) / 0.62);
       backdrop-filter: blur(18px) saturate(160%);
       -webkit-backdrop-filter: blur(18px) saturate(160%);
     }
     .dark .panel {
-      background: hsl(var(--frost-50) / 0.45);
+      background: hsl(var(--surface) / 0.45);
       backdrop-filter: blur(18px) saturate(160%);
       -webkit-backdrop-filter: blur(18px) saturate(160%);
     }
     .panel-strong {
-      background: hsl(var(--frost-50) / 0.8);
+      background: hsl(var(--surface) / 0.8);
       backdrop-filter: blur(26px) saturate(180%);
       -webkit-backdrop-filter: blur(26px) saturate(180%);
     }
     .dark .panel-strong {
-      background: hsl(var(--frost-50) / 0.7);
+      background: hsl(var(--surface) / 0.7);
       backdrop-filter: blur(26px) saturate(180%);
       -webkit-backdrop-filter: blur(26px) saturate(180%);
     }
