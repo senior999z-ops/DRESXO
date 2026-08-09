@@ -61,7 +61,7 @@ export default function CollectionsPage() {
 
         <div className="mt-10 grid grid-cols-2 gap-4">
           {CATEGORY_CARDS.map((c) => (
-            
+            <a
               key={c.label}
               href={c.href}
               className="group relative overflow-hidden rounded-2xl border-2 border-volt/25 transition-colors active:border-volt"
@@ -81,7 +81,7 @@ export default function CollectionsPage() {
 
         <div className="mt-10 flex flex-wrap justify-center gap-2.5">
           {NAV_BUTTONS.map((nav) => (
-            
+            <a
               key={nav.label}
               href={nav.href}
               className="panel-strong flex items-center gap-2 whitespace-nowrap rounded-full px-5 py-3 font-mono-wide text-[10px] uppercase tracking-[0.2em] text-ink shadow-lg dark:text-frost-50"
@@ -156,3 +156,4 @@ export default function CollectionsPage() {
     </main>
   );
 }
+
