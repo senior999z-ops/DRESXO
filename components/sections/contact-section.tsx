@@ -27,7 +27,7 @@ export function ContactSection() {
               { icon: Mail, value: 'dresxo.support@gmail.com' },
               { icon: Phone, value: '+92 327 9198527' },
               { icon: Instagram, value: '@dresxo.pk' },
-              { icon: Music2, value: '@dresxo.pk' },
+              { icon: Music2, value: '@dresxo' },
             ].map((item, i) => (
               <motion.div key={i} whileHover={{ x: 6 }} className="flex items-center gap-4">
                 <div className="panel flex h-11 w-11 items-center justify-center rounded-full text-volt">
