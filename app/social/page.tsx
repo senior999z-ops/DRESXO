@@ -7,14 +7,14 @@ import { Reveal, TextReveal } from '@/components/reveal';
 const SOCIALS = [
   {
     name: 'Instagram',
-    handle: '@dresxo.official',
-    href: 'https://instagram.com/dresxo.official',
+    handle: '@dresxo.pk',
+    href: 'https://instagram.com/dresxo.pk',
     icon: Instagram,
   },
   {
     name: 'TikTok',
-    handle: '@dresxo.official',
-    href: 'https://tiktok.com/@dresxo.official',
+    handle: '@dresxo',
+    href: 'https://tiktok.com/@dresxo',
     icon: Music2,
   },
   {
