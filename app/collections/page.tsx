@@ -51,10 +51,10 @@ export default function CollectionsPage() {
   return (
     <main className="relative z-10 lg:h-screen lg:min-h-screen lg:overflow-hidden">
       {/* Mobile: clean, ordered, compact layout - fits in one screen */}
-      <div className="px-6 pb-6 pt-48 lg:hidden">
+      <div className="px-6 pb-6 pt-20 lg:hidden">
         <div className="text-center">
           <p className="font-mono-wide text-[9px] uppercase tracking-[0.5em] text-volt">Discover</p>
-          <h1 className="mt-1 font-display text-3xl font-semibold uppercase tracking-[0.1em] text-ink dark:text-frost-50">
+          <h1 className="mt-1 font-display text-3xl font-bold uppercase tracking-[0.1em] text-black dark:text-white">
             Collections
           </h1>
         </div>

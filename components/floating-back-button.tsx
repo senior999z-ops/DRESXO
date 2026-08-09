@@ -26,7 +26,7 @@ export function FloatingBackButton() {
         else router.push('/');
       }}
       data-cursor-label="back"
-      className="panel-strong fixed left-4 top-36 z-[120] flex items-center gap-2 rounded-full px-5 py-3 text-ink shadow-lg dark:text-frost-50 lg:left-6 lg:top-6"
+      className="panel-strong fixed left-4 top-5 z-[120] flex items-center gap-2 rounded-full px-5 py-3 text-ink shadow-lg dark:text-frost-50 lg:left-6 lg:top-6"
       aria-label="Go back"
     >
       <ArrowLeft className="h-4 w-4" />
