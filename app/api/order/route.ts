@@ -1,4 +1,4 @@
-﻿import { NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 const TO_EMAIL = 'dresxo.support@gmail.com';
 // Uses Resend's shared testing sender until a DRESXO domain is verified in
@@ -31,7 +31,7 @@ export async function POST(request: Request) {
         from: FROM_EMAIL,
         to: [TO_EMAIL],
         reply_to: form.email,
-        subject: `New DRESXO Order â€” ${form.firstName} ${form.lastName}`,
+        subject: `New DRESXO Order — ${form.firstName} ${form.lastName}`,
         html: `
           <div style="font-family: sans-serif; max-width: 520px;">
             <h2>New DRESXO Order</h2>

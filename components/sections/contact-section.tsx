@@ -24,7 +24,7 @@ export function ContactSection() {
           >
             {[
               { icon: MapPin, value: 'Lahore, Pakistan' },
-              { icon: Mail, value: 'support.lunarbloom.pk@gmail.com' },
+              { icon: Mail, value: 'dresxo.support@gmail.com' },
               { icon: Phone, value: '+92 327 9198527' },
               { icon: Instagram, value: '@dresxo.pk' },
               { icon: Music2, value: '@dresxo' },

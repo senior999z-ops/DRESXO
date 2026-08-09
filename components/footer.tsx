@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Instagram, Mail, MessageCircle, Music2 } from 'lucide-react';
@@ -33,8 +33,9 @@ export function Footer() {
       <div className="relative z-10 mx-auto max-w-7xl px-6 py-16 lg:px-10">
         <div className="grid grid-cols-2 gap-8 md:grid-cols-4 lg:gap-12">
           <div>
-            <p className="font-mono-wide text-[9px] uppercase tracking-[0.4em] text-volt">Menswear</p>
+            <p className="font-mono-wide text-[9px] uppercase tracking-[0.4em] text-volt">Men's Wear</p>
             <p className="mt-1 font-display text-3xl font-semibold uppercase tracking-[0.2em]">DRESXO</p>
+            <p className="mt-2 font-mono-wide text-[9px] uppercase tracking-[0.35em] text-frost-50/40">Elevate Your Style</p>
             <p className="mt-4 max-w-xs text-sm text-frost-50/50">
               Tracksuits, shirts and trousers built for everyday movement. Made
               and delivered across Pakistan.
@@ -63,7 +64,7 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col items-center justify-between gap-6 border-t border-frost-50/10 pt-8 md:flex-row">
           <p className="font-mono-wide text-[10px] uppercase tracking-wider text-frost-50/40">
-            Â© {new Date().getFullYear()} DRESXO. Made in Pakistan.
+            © {new Date().getFullYear()} DRESXO. Made in Pakistan.
           </p>
           <div className="flex items-center gap-4">
             {[
