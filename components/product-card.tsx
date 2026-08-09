@@ -33,7 +33,7 @@ export function ProductCard({ product, index, onQuickView }: ProductCardProps) {
       <motion.div
         whileHover={{ scale: 1.02 }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-        className="relative overflow-hidden rounded-2xl border border-border bg-frost-50/40"
+        className="relative overflow-hidden rounded-2xl border border-border bg-surface/40"
       >
         <div className="relative aspect-[3/4] overflow-hidden">
           <motion.div
@@ -81,7 +81,7 @@ export function ProductCard({ product, index, onQuickView }: ProductCardProps) {
               whileTap={{ scale: 0.9 }}
               onClick={() => toggle(product.id)}
               data-cursor-label="save"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-frost-50/95 text-ink"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-surface/95 text-ink"
               aria-label="Add to wishlist"
             >
               <Heart className={cn('h-4 w-4', has(product.id) && 'fill-volt text-volt')} />
@@ -96,7 +96,7 @@ export function ProductCard({ product, index, onQuickView }: ProductCardProps) {
                 whileTap={{ scale: 0.9 }}
                 onClick={() => onQuickView(product)}
                 data-cursor-label="view"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-frost-50/95 text-ink"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-surface/95 text-ink"
                 aria-label="Quick view"
               >
                 <Eye className="h-4 w-4" />

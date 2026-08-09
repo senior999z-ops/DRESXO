@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Instagram, Mail, MapPin, Music2, Phone, Send } from 'lucide-react';
@@ -9,7 +9,7 @@ export function ContactSection() {
   const [sending, setSending] = useState(false);
 
   const inputClass =
-    'w-full rounded-xl border border-border bg-frost-50/50 px-5 py-3 text-sm text-ink outline-none transition-colors focus:border-volt focus:ring-1 focus:ring-volt/30 dark:text-frost-50';
+    'w-full rounded-xl border border-border bg-surface/50 px-5 py-3 text-sm text-ink outline-none transition-colors focus:border-volt focus:ring-1 focus:ring-volt/30 dark:text-frost-50';
 
   return (
     <section className="relative z-10 pb-24">
@@ -24,7 +24,7 @@ export function ContactSection() {
           >
             {[
               { icon: MapPin, value: 'Lahore, Pakistan' },
-              { icon: Mail, value: 'dresxo.support@gmail.com' },
+              { icon: Mail, value: 'support.lunarbloom.pk@gmail.com' },
               { icon: Phone, value: '+92 327 9198527' },
               { icon: Instagram, value: '@dresxo.pk' },
               { icon: Music2, value: '@dresxo' },

@@ -1,4 +1,4 @@
-﻿'use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import { Instagram, Mail, MessageCircle, Music2 } from 'lucide-react';
@@ -25,8 +25,8 @@ const SOCIALS = [
   },
   {
     name: 'Email',
-    handle: 'dresxo.support@gmail.com',
-    href: 'mailto:dresxo.support@gmail.com',
+    handle: 'support.lunarbloom.pk@gmail.com',
+    href: 'mailto:support.lunarbloom.pk@gmail.com',
     icon: Mail,
   },
 ];
@@ -55,7 +55,7 @@ export default function SocialPage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.25 + i * 0.12, duration: 0.55 }}
               whileHover={{ scale: 1.02, y: -2 }}
-              className="flex items-center gap-4 rounded-2xl border border-border bg-frost-50/40 px-6 py-5 transition-colors hover:border-volt"
+              className="flex items-center gap-4 rounded-2xl border border-border bg-surface/40 px-6 py-5 transition-colors hover:border-volt"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-volt-dark to-volt text-frost-50">
                 <s.icon className="h-5 w-5" />

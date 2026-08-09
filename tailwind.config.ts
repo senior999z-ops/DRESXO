@@ -30,6 +30,7 @@ const config: Config = {
           dark: 'hsl(var(--volt-dark))',
           light: 'hsl(var(--volt-light))',
         },
+        surface: 'hsl(var(--surface))',
         border: 'hsl(var(--border))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',

@@ -27,7 +27,8 @@ export function GlobalBackground() {
   return (
     <div className="pointer-events-none fixed inset-0 z-0 overflow-hidden">
       {/* Base wash */}
-      <div className="absolute inset-0 bg-gradient-to-b from-frost-50 via-frost-100 to-frost-200" />
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/5 dark:to-white/5" />
 
       {/* Technical grid */}
       <div className="absolute inset-0 bg-grid opacity-60" />

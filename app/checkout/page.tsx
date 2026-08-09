@@ -43,7 +43,7 @@ export default function CheckoutPage() {
   };
 
   const inputClass =
-    'w-full rounded-xl border border-border bg-frost-50/50 px-5 py-3 text-sm text-ink outline-none transition-colors focus:border-volt focus:ring-1 focus:ring-volt/30 dark:text-frost-50';
+    'w-full rounded-xl border border-border bg-surface/50 px-5 py-3 text-sm text-ink outline-none transition-colors focus:border-volt focus:ring-1 focus:ring-volt/30 dark:text-frost-50';
 
   if (step === 'done') {
     return (
