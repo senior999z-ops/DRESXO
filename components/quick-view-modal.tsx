@@ -36,7 +36,7 @@ export function QuickViewModal({ product, onClose }: QuickViewModalProps) {
           exit={{ opacity: 0 }}
           className="fixed inset-0 z-[180] flex items-center justify-center p-4"
         >
-          <div className="absolute inset-0 bg-ink-dark/60" onClick={onClose} />
+          <div className="absolute inset-0 bg-ink-dark" onClick={onClose} />
           <motion.div
             initial={{ scale: 0.88, y: 26, opacity: 0 }}
             animate={{ scale: 1, y: 0, opacity: 1 }}
