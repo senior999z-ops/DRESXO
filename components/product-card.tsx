@@ -74,14 +74,11 @@ export function ProductCard({ product, index, onQuickView }: ProductCardProps) {
 
           <div className="absolute bottom-4 left-1/2 z-10 flex -translate-x-1/2 items-center gap-2">
             <motion.button
-              initial={{ opacity: 0, scale: 0, y: 16 }}
-              animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0, y: hovered ? 0 : 16 }}
-              transition={{ delay: 0.1, type: 'spring', stiffness: 200 }}
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.9 }}
               onClick={() => toggle(product.id)}
               data-cursor-label="save"
-              className="flex h-10 w-10 items-center justify-center rounded-full bg-surface/95 text-ink"
+              className="flex h-10 w-10 items-center justify-center rounded-full bg-surface/95 text-ink shadow-lg dark:text-frost-50"
               aria-label="Add to wishlist"
             >
               <Heart className={cn('h-4 w-4', has(product.id) && 'fill-volt text-volt')} />
@@ -89,14 +86,11 @@ export function ProductCard({ product, index, onQuickView }: ProductCardProps) {
 
             {onQuickView && (
               <motion.button
-                initial={{ opacity: 0, scale: 0, y: 16 }}
-                animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0, y: hovered ? 0 : 16 }}
-                transition={{ delay: 0.16, type: 'spring', stiffness: 200 }}
                 whileHover={{ scale: 1.15 }}
                 whileTap={{ scale: 0.9 }}
                 onClick={() => onQuickView(product)}
                 data-cursor-label="view"
-                className="flex h-10 w-10 items-center justify-center rounded-full bg-surface/95 text-ink"
+                className="flex h-10 w-10 items-center justify-center rounded-full bg-surface/95 text-ink shadow-lg dark:text-frost-50"
                 aria-label="Quick view"
               >
                 <Eye className="h-4 w-4" />
@@ -104,9 +98,6 @@ export function ProductCard({ product, index, onQuickView }: ProductCardProps) {
             )}
 
             <motion.button
-              initial={{ opacity: 0, scale: 0, y: 16 }}
-              animate={{ opacity: hovered ? 1 : 0, scale: hovered ? 1 : 0, y: hovered ? 0 : 16 }}
-              transition={{ delay: 0.22, type: 'spring', stiffness: 200 }}
               whileHover={{ scale: 1.15 }}
               whileTap={{ scale: 0.9 }}
               onClick={() =>
