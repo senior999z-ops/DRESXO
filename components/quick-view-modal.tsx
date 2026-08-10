@@ -54,7 +54,7 @@ export function QuickViewModal({ product, onClose }: QuickViewModalProps) {
           >
             <button
               onClick={onClose}
-              className="absolute right-5 top-5 z-10 rounded-full bg-ink-dark/70 p-2.5 text-frost-50 shadow-lg backdrop-blur-sm transition-colors hover:bg-volt hover:text-ink-dark"
+              className="absolute right-5 top-5 z-10 rounded-full bg-gradient-to-br from-volt-dark to-volt p-2.5 text-ink-dark shadow-lg transition-transform hover:scale-110"
               aria-label="Close"
             >
               <X className="h-5 w-5" />
