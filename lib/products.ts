@@ -25,7 +25,7 @@ export const products: Product[] = [
   {
     id: 'vx01-apex-tracksuit',
     name: 'Apex Tracksuit',
-    code: 'VX01',
+    code: 'DX01',
     tagline: 'Two-Piece Performance Set',
     description:
       'A tapered-fit tracksuit built from brushed poly-cotton with a matte finish. Zip-through jacket with ribbed cuffs, paired with jogger-cut bottoms and side pockets.',
@@ -40,7 +40,7 @@ export const products: Product[] = [
   {
     id: 'vx02-onyx-oxford-shirt',
     name: 'Onyx Oxford Shirt',
-    code: 'VX02',
+    code: 'DX02',
     tagline: 'Structured Everyday Shirt',
     description:
       'A crisp oxford-weave shirt with a reinforced collar and mother-of-pearl buttons. Cut slim through the body with a clean, drape-friendly finish.',
@@ -54,7 +54,7 @@ export const products: Product[] = [
   {
     id: 'vx03-drift-trousers',
     name: 'Drift Trousers',
-    code: 'VX03',
+    code: 'DX03',
     tagline: 'Tailored Stretch Trousers',
     description:
       'Mid-rise trousers with a touch of stretch for all-day movement. Clean front, hidden hook closure, and a sharp tapered leg that holds its line.',

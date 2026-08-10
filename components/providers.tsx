@@ -130,6 +130,7 @@ export function Providers({ children }: { children: ReactNode }) {
 
   const isHome = pathname === '/';
   const isCollections = pathname === '/collections';
+  const isProductDetail = pathname.startsWith('/shop/');
   const isWishlist = pathname === '/wishlist';
   const isAbout = pathname === '/about';
   const isContact = pathname === '/contact';
@@ -138,7 +139,7 @@ export function Providers({ children }: { children: ReactNode }) {
 
   // Navbar / announcement bar / footer are hidden on the "branded" pages that
   // navigate through floating buttons instead.
-  const hideChrome = isHome || isCollections || isWishlist || isAbout || isContact || isLegal || isSocial;
+  const hideChrome = isHome || isCollections || isWishlist || isAbout || isContact || isLegal || isSocial || isProductDetail;
 
   // The animated ambient background is decorative — keep it off the
   // shopping/checkout pages so those stay fast, especially on mobile.
