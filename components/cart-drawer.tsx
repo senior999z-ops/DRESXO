@@ -3,11 +3,19 @@
 import { AnimatePresence, motion } from 'framer-motion';
 import { Minus, Plus, ShoppingBag, Trash2, X } from 'lucide-react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { useEffect } from 'react';
 import { useCart } from '@/components/providers';
 import { formatPKR } from '@/lib/products';
 
 export function CartDrawer() {
   const { items, isOpen, setIsOpen, removeItem, updateQuantity, total } = useCart();
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathname]);
 
   return (
     <AnimatePresence>
