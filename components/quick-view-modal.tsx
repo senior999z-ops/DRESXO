@@ -2,7 +2,8 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { Heart, ShoppingBag, X } from 'lucide-react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { useCart, useWishlist } from '@/components/providers';
 import type { Product } from '@/lib/products';
 import { formatPKR } from '@/lib/products';
@@ -16,6 +17,11 @@ interface QuickViewModalProps {
 export function QuickViewModal({ product, onClose }: QuickViewModalProps) {
   const { addItem } = useCart();
   const { toggle, has } = useWishlist();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   useEffect(() => {
     if (product) {
@@ -27,7 +33,9 @@ export function QuickViewModal({ product, onClose }: QuickViewModalProps) {
     }
   }, [product]);
 
-  return (
+  if (!mounted) return null;
+
+  return createPortal(
     <AnimatePresence>
       {product && (
         <motion.div
@@ -122,6 +130,7 @@ export function QuickViewModal({ product, onClose }: QuickViewModalProps) {
           </motion.div>
         </motion.div>
       )}
-    </AnimatePresence>
+    </AnimatePresence>,
+    document.body
   );
 }
