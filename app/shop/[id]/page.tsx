@@ -1,9 +1,8 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import { ArrowLeft, Check, Heart, Minus, Plus, ShoppingBag } from 'lucide-react';
 import { notFound, useParams } from 'next/navigation';
-import Link from 'next/link';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useCart, useWishlist } from '@/components/providers';
@@ -17,7 +16,7 @@ export default function ProductDetailPage() {
   const id = params.id as string;
   const product = getProduct(id);
 
-  // Every hook runs before any early return — React requires a stable hook
+  // Every hook runs before any early return â€” React requires a stable hook
   // order on each render.
   const { addItem } = useCart();
   const { toggle, has } = useWishlist();
