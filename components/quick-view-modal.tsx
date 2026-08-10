@@ -2,6 +2,7 @@
 
 import { AnimatePresence, motion } from 'framer-motion';
 import { Heart, ShoppingBag, X } from 'lucide-react';
+import { useEffect } from 'react';
 import { useCart, useWishlist } from '@/components/providers';
 import type { Product } from '@/lib/products';
 import { formatPKR } from '@/lib/products';
@@ -15,6 +16,16 @@ interface QuickViewModalProps {
 export function QuickViewModal({ product, onClose }: QuickViewModalProps) {
   const { addItem } = useCart();
   const { toggle, has } = useWishlist();
+
+  useEffect(() => {
+    if (product) {
+      const prevOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+      return () => {
+        document.body.style.overflow = prevOverflow;
+      };
+    }
+  }, [product]);
 
   return (
     <AnimatePresence>
