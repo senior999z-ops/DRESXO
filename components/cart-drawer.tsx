@@ -1,6 +1,6 @@
 'use client';
 
-import { AnimatePresence, motion } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Minus, Plus, ShoppingBag, Trash2, X } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -18,23 +18,22 @@ export function CartDrawer() {
   }, [pathname]);
 
   return (
-    <AnimatePresence>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="fixed inset-0 z-[190]"
-        >
-          <div className="absolute inset-0 bg-ink-dark/50" onClick={() => setIsOpen(false)} />
+    <motion.div
+      initial={false}
+      animate={{ opacity: isOpen ? 1 : 0 }}
+      transition={{ duration: 0.25 }}
+      style={{ pointerEvents: isOpen ? 'auto' : 'none' }}
+      aria-hidden={!isOpen}
+      className="fixed inset-0 z-[190]"
+    >
+      <div className="absolute inset-0 bg-ink-dark/50" onClick={() => setIsOpen(false)} />
 
-          <motion.div
-            initial={{ x: '100%' }}
-            animate={{ x: 0 }}
-            exit={{ x: '100%' }}
-            transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-            className="panel-strong absolute right-0 top-0 flex h-full w-96 max-w-[90vw] flex-col p-6"
-          >
+      <motion.div
+        initial={false}
+        animate={{ x: isOpen ? 0 : '100%' }}
+        transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+        className="panel-strong absolute right-0 top-0 flex h-full w-96 max-w-[90vw] flex-col p-6"
+      >
             <div className="mb-6 flex items-center justify-between">
               <h2 className="font-display text-2xl uppercase tracking-[0.14em] text-ink dark:text-frost-50">
                 Your Bag
@@ -139,7 +138,5 @@ export function CartDrawer() {
             )}
           </motion.div>
         </motion.div>
-      )}
-    </AnimatePresence>
   );
 }
