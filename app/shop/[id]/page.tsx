@@ -1,9 +1,10 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Check, Heart, Minus, Plus, ShoppingBag } from 'lucide-react';
+import { ArrowLeft, Check, Heart, Minus, Plus, ShoppingBag } from 'lucide-react';
 import { notFound, useParams } from 'next/navigation';
-import { useState } from 'react';
+import Link from 'next/link';
+import { useEffect, useState } from 'react';
 import { useCart, useWishlist } from '@/components/providers';
 import { ProductCard } from '@/components/product-card';
 import { Reveal, TextReveal } from '@/components/reveal';
@@ -22,6 +23,10 @@ export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
   const [zoom, setZoom] = useState(false);
   const [added, setAdded] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!product) return notFound();
 
@@ -45,6 +50,14 @@ export default function ProductDetailPage() {
   return (
     <main className="relative z-10 min-h-screen pt-44 sm:pt-36 lg:pt-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-10">
+        <Link
+          href="/shop"
+          className="mb-6 inline-flex items-center gap-2 font-mono-wide text-[10px] uppercase tracking-wider text-ink-light transition-colors hover:text-volt dark:text-frost-200"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" />
+          Back to Shop
+        </Link>
+
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2">
           <Reveal direction="left">
             <div
