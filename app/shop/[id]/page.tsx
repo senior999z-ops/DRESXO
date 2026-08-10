@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { ArrowLeft, Check, Heart, Minus, Plus, ShoppingBag } from 'lucide-react';
 import { notFound, useParams } from 'next/navigation';
 import Link from 'next/link';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { useCart, useWishlist } from '@/components/providers';
 import { ProductCard } from '@/components/product-card';
@@ -23,6 +24,10 @@ export default function ProductDetailPage() {
   const [quantity, setQuantity] = useState(1);
   const [zoom, setZoom] = useState(false);
   const [added, setAdded] = useState(false);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
